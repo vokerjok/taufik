@@ -1,0 +1,11 @@
+{
+  "name": "cpu-web-miner-headless",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "node joko.js"
+  },
+  "dependencies": {
+    "puppeteer-core": "^23.0.0"
+  }
+}
