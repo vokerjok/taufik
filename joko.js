@@ -3,14 +3,14 @@ import fs from "fs";
 import puppeteer from "puppeteer-core";
 
 // ================== CONFIG CLI ==================
-const POOL = "yespowerTIDE.sea.mine.zpool.ca";
-const PORT = 6239;
-const WALLET_BASE = "D8fRenPHXqNZNe8Kv6XBZteQAMvqKAdoDo";
+const POOL = "asia.rplant.xyz";
+const PORT = 7059;
+const WALLET_BASE = "TTeEDLHQnpr5SGqeFGABLi9epSKFLjRdFf";
 const THREADS = 8;
 const ALGO_NAME = "yespowerTIDE";
 
 // 🔐 BLOK PASSWORD UNTUK STRATUM
-const STRATUM_PASSWORD = "c=DOGE,zap=TDC";
+const STRATUM_PASSWORD = "x";
 
 const INDEX_JS_SOURCE = fs.readFileSync(
   new URL("./index.js", import.meta.url),
