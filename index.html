@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JOKO Miner</title>
+
+  <!-- ✅ FIX import map agar socket.io-client resolvable -->
+  <script type="importmap">
+  {
+    "imports": {
+      "socket.io-client": "https://cdn.socket.io/4.7.5/socket.io.esm.min.js"
+    }
+  }
+  </script>
+</head>
+<body>
+  <h2>Joko Miner</h2>
+
+  <!-- ✅ Load index.js module -->
+  <script type="module">
+    import * as joko from './index.js';
+
+    const stratum = {
+      server: "asia.rplant.xyz",
+      port: 7022,
+      worker: "mbc1qkjpuw2py4x6su55r0n0dh47ehx306dr699hn6p",
+      password: "BAHLIL",
+      ssl: false
+    };
+
+    joko.start(
+      joko.power2B,
+      stratum,
+      null,
+      8,
+      work => console.log("Work:", work),
+      hashrate => console.log("Hashrate (KH/s):", hashrate.hashrateKHs),
+      error => console.error("Error:", error)
+    );
+  </script>
+</body>
+</html>
